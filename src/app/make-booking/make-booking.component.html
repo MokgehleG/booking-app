@@ -1,0 +1,50 @@
+<div class="booking-form" mt-5 pt-4>
+
+  <form [formGroup]="bookingform">
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input formControlName="FirstName"   matInput placeholder="first name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input formControlName = "LastName"  matInput placeholder="last name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input  formControlName="Email" matInput placeholder="email">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Cell</mat-label>
+          <input formControlName="Cell" matInput placeholder="phone number">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      
+        </mat-form-field>
+      </div>
+     
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+        <mat-label>Select Province</mat-label>
+        <mat-select formControlName="Province" >
+         <mat-option *ngFor="let Province of Provinces" [value]="Province">
+         {{Province}}
+        </mat-option>
+         </mat-select>
+      </mat-form-field>
+      </div>
+
+ <button  (click)="Proceed()"  class ="mt-4"  mat-raised-button color="accent">submit</button>
+</div>
